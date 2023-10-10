@@ -32,15 +32,13 @@ class DashboardActivityTest {
         appDatabase.clearAllTables()
     }
 
-    private fun getDummyAccount(): AccountModel {
-        val accountModel = AccountModel()
-        accountModel.title = "Github ${System.currentTimeMillis()}"
-        accountModel.username = "yogeshpaliyal"
-        accountModel.password = "1234567890"
-        accountModel.tags = "social"
-        accountModel.site = "https://yogeshpaliyal.com"
-        accountModel.notes = "Testing Notes"
-        return accountModel
+    private fun getDummyAccount() = AccountModel().apply {
+        title = "Github ${System.currentTimeMillis()}"
+        username = "yogeshpaliyal"
+        password = "1234567890"
+        tags = "social"
+        site = "https://yogeshpaliyal.com"
+        notes = "Testing Notes"
     }
 
     @Test
